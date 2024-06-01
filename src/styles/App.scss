@@ -1,0 +1,121 @@
+$app-bg-color: #f9f9f9;
+$app-text-color: #333;
+$app-primary-color: #007bff;
+
+body {
+  background-color: $app-bg-color;
+  color: $app-text-color;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: $app-primary-color;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+
+  input, button {
+    padding: 10px;
+    font-size: 16px;
+  }
+
+  button {
+    background-color: $app-primary-color;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+      background-color: darken($app-primary-color, 10%);
+    }
+  }
+}
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact-item {
+  padding: 10px;
+  background-color: #f1f1f1;
+  border: 1px solid #ddd;
+
+  h3 {
+    margin: 0 0 5px 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .app {
+    padding: 15px;
+    box-shadow: none;
+  }
+
+  .contact-form {
+    input, button {
+      padding: 8px;
+      font-size: 14px;
+    }
+  }
+
+  .contact-item {
+    padding: 8px;
+
+    h3 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .app {
+    padding: 10px;
+  }
+
+  .contact-form {
+    input, button {
+      padding: 6px;
+      font-size: 12px;
+    }
+  }
+
+  .contact-item {
+    padding: 6px;
+
+    h3 {
+      font-size: 14px;
+    }
+
+    p {
+      font-size: 12px;
+    }
+  }
+}
+
