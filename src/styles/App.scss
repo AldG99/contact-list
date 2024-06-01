@@ -1,121 +1,121 @@
+// Variables de colores de la aplicación
 $app-bg-color: #f9f9f9;
 $app-text-color: #333;
 $app-primary-color: #007bff;
 
 body {
-  background-color: $app-bg-color;
-  color: $app-text-color;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  background-color: $app-bg-color; // Establece el color de fondo del cuerpo del documento
+  color: $app-text-color; // Establece el color del texto
+  font-family: Arial, sans-serif; // Establece la fuente del texto
+  margin: 0; // Elimina el margen predeterminado del cuerpo
+  padding: 0; // Elimina el relleno predeterminado del cuerpo
+  box-sizing: border-box; // Establece el modelo de caja como 'border-box' para incluir el relleno y el borde en el ancho y alto total del elemento
 }
 
 .app {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px; // Establece el ancho máximo de la aplicación
+  margin: 0 auto; // Centra la aplicación horizontalmente
+  padding: 20px; // Añade un relleno interno a la aplicación
+  background-color: #fff; // Establece el color de fondo de la aplicación
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); // Añade una sombra alrededor de la aplicación
 }
 
 h1 {
-  text-align: center;
-  color: $app-primary-color;
+  text-align: center; // Centra el texto del encabezado
+  color: $app-primary-color; // Establece el color del texto del encabezado
 }
 
 .contact-form {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin-bottom: 20px;
+  display: flex; // Establece el diseño de los elementos del formulario en fila
+  flex-direction: column; // Establece la dirección de los elementos del formulario en columna
+  gap: 10px; // Establece el espacio entre los elementos del formulario
+  margin-bottom: 20px; // Añade un margen inferior al formulario
 
   input, button {
-    padding: 10px;
-    font-size: 16px;
+    padding: 10px; // Establece el relleno de los campos de entrada y los botones
+    font-size: 16px; // Establece el tamaño de fuente de los campos de entrada y los botones
   }
 
   button {
-    background-color: $app-primary-color;
-    color: #fff;
-    border: none;
-    cursor: pointer;
+    background-color: $app-primary-color; // Establece el color de fondo del botón
+    color: #fff; // Establece el color del texto del botón
+    border: none; // Elimina el borde del botón
+    cursor: pointer; // Cambia el cursor al pasar sobre el botón
 
     &:hover {
-      background-color: darken($app-primary-color, 10%);
+      background-color: darken($app-primary-color, 10%); // Oscurece el color de fondo del botón al pasar sobre él
     }
   }
 }
 
 .contact-list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  display: flex; // Establece el diseño de los elementos de la lista de contactos en fila
+  flex-direction: column; // Establece la dirección de los elementos de la lista de contactos en columna
+  gap: 10px; // Establece el espacio entre los elementos de la lista de contactos
 }
 
 .contact-item {
-  padding: 10px;
-  background-color: #f1f1f1;
-  border: 1px solid #ddd;
+  padding: 10px; // Establece el relleno de los elementos de la lista de contactos
+  background-color: #f1f1f1; // Establece el color de fondo de los elementos de la lista de contactos
+  border: 1px solid #ddd; // Establece el borde de los elementos de la lista de contactos
 
   h3 {
-    margin: 0 0 5px 0;
+    margin: 0 0 5px 0; // Establece el margen del título del contacto
   }
 
   p {
-    margin: 0;
+    margin: 0; // Establece el margen del párrafo del contacto
   }
 }
 
-// Responsive design
+// Diseño responsive
 @media (max-width: 768px) {
   .app {
-    padding: 15px;
-    box-shadow: none;
+    padding: 15px; // Ajusta el relleno interno de la aplicación para pantallas pequeñas
+    box-shadow: none; // Elimina la sombra de la aplicación para pantallas pequeñas
   }
 
   .contact-form {
     input, button {
-      padding: 8px;
-      font-size: 14px;
+      padding: 8px; // Ajusta el relleno de los campos de entrada y los botones para pantallas pequeñas
+      font-size: 14px; // Ajusta el tamaño de fuente de los campos de entrada y los botones para pantallas pequeñas
     }
   }
 
   .contact-item {
-    padding: 8px;
+    padding: 8px; // Ajusta el relleno de los elementos de la lista de contactos para pantallas pequeñas
 
     h3 {
-      font-size: 16px;
+      font-size: 16px; // Ajusta el tamaño de fuente del título del contacto para pantallas pequeñas
     }
 
     p {
-      font-size: 14px;
+      font-size: 14px; // Ajusta el tamaño de fuente del párrafo del contacto para pantallas pequeñas
     }
   }
 }
 
 @media (max-width: 480px) {
   .app {
-    padding: 10px;
+    padding: 10px; // Ajusta el relleno interno de la aplicación para pantallas muy pequeñas
   }
 
   .contact-form {
     input, button {
-      padding: 6px;
-      font-size: 12px;
+      padding: 6px; // Ajusta el relleno de los campos de entrada y los botones para pantallas muy pequeñas
+      font-size: 12px; // Ajusta el tamaño de fuente de los campos de entrada y los botones para pantallas muy pequeñas
     }
   }
 
   .contact-item {
-    padding: 6px;
+    padding: 6px; // Ajusta el relleno de los elementos de la lista de contactos para pantallas muy pequeñas
 
     h3 {
-      font-size: 14px;
+      font-size: 14px; // Ajusta el tamaño de fuente del título del contacto para pantallas muy pequeñas
     }
 
     p {
-      font-size: 12px;
+      font-size: 12px; // Ajusta el tamaño de fuente del párrafo del contacto para pantallas muy pequeñas
     }
   }
 }
-
